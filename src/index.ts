@@ -1,72 +1,69 @@
 //1
-class Animal {
-    name: string;
-    species: string;
-
-
-    constructor(name:string, species:string) {
-        this.name= name;
-        this.species = species;
-    }
-
-    sound(): void {
-        console.log("The animal makes a sound");
-    }
-}
-
-class Dog extends Animal {
-    breed:string;
-
-
-    constructor(name:string, species:string, breed:string) {
-        super(name, species);
-        this.breed= breed;
-    }
-
-    sound(): void {
-        console.log("The dog barks")
-    }
-}
-
-const animal = new Animal("Simba", "Lilly");
-animal.sound();
-
-
-const dog = new Dog("Lord", "Dog", "Labrador");
-dog.sound();
-
-
-
-
-
-
-
-
-//2
-
-// class Library {
-//     static totalBooks: number=0;
+// class Animal {
 //     name: string;
+//     species: string;
 
-//     constructor(name:string) {
+
+//     constructor(name:string, species:string) {
 //         this.name= name;
+//         this.species = species;
 //     }
 
-//     addBook(): void {
-//         Library.totalBooks++;
+//     sound(): void {
+//         console.log("The animal makes a sound");
 //     }
-    
 // }
-// const lib1 = new Library("Test1");
-// const lib2 = new Library("Test2");
 
-// lib1.addBook();
-// lib1.addBook();
-// lib2.addBook();
-// lib2.addBook();
-// lib2.addBook();
+// class Dog extends Animal {
+//     breed:string;
 
-// console.log(Library.totalBooks);
+
+//     constructor(name:string, species:string, breed:string) {
+//         super(name, species);
+//         this.breed= breed;
+//     }
+
+//     sound(): void {
+//         console.log("The dog barks")
+//     }
+// }
+
+// const animal = new Animal("Simba", "Lilly");
+// animal.sound();
+
+
+// const dog = new Dog("Lord", "Dog", "Labrador");
+// dog.sound();
+
+
+
+
+
+
+
+
+//2//
+class Library {
+    static totalBooks: number=0;
+    name: string;
+
+    constructor(name:string) {
+        this.name= name;
+        this.addBook();
+
+    }  
+
+    addBook(): void {
+        Library.totalBooks++;
+    }
+}
+const lib1 = new Library("Test1");
+const lib2 = new Library("Test2");
+
+lib1.addBook();
+lib2.addBook();
+
+console.log(Library.totalBooks);
 
 
 
